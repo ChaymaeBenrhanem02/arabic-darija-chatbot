@@ -1,0 +1,51 @@
+# Environnement virtuel
+venv/
+env/
+.env
+
+# Modèle BERT (téléchargé automatiquement depuis HuggingFace)
+models/
+*.bin
+*.pt
+*.safetensors
+
+# Cache Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Cache Streamlit / HuggingFace
+.streamlit/secrets.toml
+.cache/
+
+# Fichiers de configuration locale
+.claude/
+
+# Fichiers système
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Fichiers temporaires Office
+~$*
+
+# Logs
+*.log
+
+# Fichiers audio/vidéo de travail
+*.mp4
+*.mp3
+*.wav
+
+# Datasets trop lourds pour GitHub (disponibles sur HuggingFace/Kaggle)
+data/raw/
+data/processed/
+data/train/
+data/val/
+data/test/
+*.csv
+
+# Jupyter
+.ipynb_checkpoints/
