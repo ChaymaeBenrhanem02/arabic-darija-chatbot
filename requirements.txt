@@ -1,0 +1,8 @@
+fastapi==0.137.1
+uvicorn==0.49.0
+streamlit==1.58.0
+transformers==5.12.1
+torch==2.12.0
+langdetect==1.0.9
+faster-whisper==1.2.1
+protobuf>=4.21,<6.0

@@ -128,17 +128,19 @@ Utilisateur (texte / audio)
 
 ## Installation
 
+**Terminal 1 — Cloner le projet et créer l'environnement :**
+
 ```bash
-# Créer un environnement virtuel
+git clone https://github.com/ChaymaeBenrhanem02/arabic-darija-chatbot.git
+cd arabic-darija-chatbot
+
+# Créer et activer l'environnement virtuel
 python -m venv venv
 venv\Scripts\activate          # Windows
 # source venv/bin/activate     # Linux/macOS
 
 # Installer les dépendances
-pip install fastapi uvicorn streamlit
-pip install transformers torch langdetect
-pip install faster-whisper
-pip install "protobuf>=4.21,<6.0"   # contrainte stricte — ne pas upgrader
+pip install -r requirements.txt
 ```
 
 > **ffmpeg non requis** : l'audio est écrit dans un fichier WAV temporaire passé directement à faster-whisper.
@@ -147,13 +149,19 @@ pip install "protobuf>=4.21,<6.0"   # contrainte stricte — ne pas upgrader
 
 ## Lancement
 
-Deux terminaux depuis la racine du projet :
+Ouvrir **3 terminaux** depuis la racine du projet :
 
 ```bash
-# Terminal 1 — Backend API (port 8000)
+# Terminal 2 — Backend API (port 8000)
+cd arabic-darija-chatbot
+venv\Scripts\activate
 uvicorn api.main:app --reload
+```
 
-# Terminal 2 — Interface web (port 8501)
+```bash
+# Terminal 3 — Interface web (port 8501)
+cd arabic-darija-chatbot
+venv\Scripts\activate
 streamlit run api/streamlit_app.py
 ```
 
